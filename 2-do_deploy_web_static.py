@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-A Fabric script (based on the file 1-pack_web_static.py
-that distributes an archive to your web servers,
-using the function do_deploy
-"""
+'''Fabric script to deploy an archive to web servers'''
 
 from fabric.api import run, put, env
 import os
@@ -12,7 +8,7 @@ import os
 def do_deploy(archive_path):
     """ Uncompresses and deploy the archive into the servers """
 
-    env.hosts = ['35.153.192.27', '54.89.28.21']
+    env.hosts = ['54.144.133.171', '52.201.221.140']
     if os.path.exists(archive_path) is False:
         return False
 
